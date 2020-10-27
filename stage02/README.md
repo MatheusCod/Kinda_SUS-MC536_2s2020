@@ -3,7 +3,7 @@
 
 ## Slides da Proposta
 
-> [Etapa 2 - Seleção de Fonte de Dados.pptx](./slides/Etapa 2 - Seleção de Fonte de Dados.pptx)
+> [Etapa 2 - Seleção de Fonte de Dados.pptx](./slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
 
 ## Motivação e Contexto
 
