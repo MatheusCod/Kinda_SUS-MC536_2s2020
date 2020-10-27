@@ -18,7 +18,7 @@ Diferença dietária com outros países.
 
 ## Método
 
-> Será feita uma união entre a base de dados 02 e 03, através dos índices em comum que as duas possuem, como Estado, Sexo e Raça/Etnicidade.
+Será feita uma união entre a base de dados 02 e 03, através dos índices em comum que as duas possuem, como Estado, Sexo e Raça/Etnicidade.
 A base de dados 01 servirá de suporte para definições e associações mais específicas entre obesidade e problemas de coração.
 Por fim, a base de dados 04 será usada para ilustrar a proporção de tipos diferentes de comida disponíveis nos EUA, enquanto a 05 poderá fornecer um comparativo global de consumo.
 
