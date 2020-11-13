@@ -1,5 +1,21 @@
 ## `stage03`
-# Etapa 03 - Primeiros Modelos e 
+# Etapa 03 - Primeiros Modelos e Análises
+
+~~~
+├── README.md  <- apresentação da etapa
+│
+├── CSVs    <- Arquivos csv da etapa
+│
+├── images    <- Imagem dos modelos conceituais
+│
+└── notebook    <- Notebooks da etapa
+      │
+      └── analiseObesidade.ipynb <- Notebook das Análises/Querys
+      │
+      └── extracaoHeartDisease.ipynb <- Notebook da extração do dataset HeartDisease
+      │
+      └── extracaoObesityStats.ipynb <- Notebook da extração do dataset ObesityStats
+~~~
 
 * Jupyter: <br>
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
