@@ -1,6 +1,15 @@
 ## `stage03`
 # Etapa 03 - Primeiros Modelos e Análises
 
+## Modelos conceituais:
+
+## Modelos lógicos:
+Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
+
+Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
+
+Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
+
 ## Slides da Proposta
 
 > [Etapa 2 - Seleção de Fonte de Dados.pptx](./slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
