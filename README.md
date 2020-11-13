@@ -1,6 +1,6 @@
 # Projeto de Banco de Dados da disciplina de MC536 2s2020
 
-* Jupyter
+* Jupyter: <br>
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
 
 ## Equipe Kinda SUS
