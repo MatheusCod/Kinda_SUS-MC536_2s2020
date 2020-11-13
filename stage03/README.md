@@ -2,6 +2,7 @@
 # Etapa 03 - Primeiros Modelos e Análises
 
 ## Modelos conceituais:
+![Modelos Conceituais](images/modelosConceituais.png)
 
 ## Modelos lógicos:
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
