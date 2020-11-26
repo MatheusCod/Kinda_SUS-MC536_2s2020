@@ -24,7 +24,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
 
 ## Modelos conceituais:
-![Modelos Conceituais](./images/modelosConceituais.png)
+![Modelos Conceituais](./images/modelos_conceituais.png)
 
 ## Modelos lógicos:
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
