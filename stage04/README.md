@@ -4,18 +4,6 @@
 * Jupyter: <br>
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
 
-## Modelos conceituais:
-![Modelos Conceituais](./images/modelos_conceituais.png)
-
-## Modelos lógicos:
-Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
-
-Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
-
-Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
-
-Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, Unprocessed red meats, Total protein, Sugar-sweetened beverages)
-
 ~~~
 ├── README.md  <- apresentação da etapa
 │
@@ -32,9 +20,21 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
       └── extracaoGlobalObesity.ipynb <- Notebook da extração do dataset Prevalence of obesity among adults
 ~~~
 
+## Modelos conceituais:
+![Modelos Conceituais](./images/modelos_conceituais.png)
+
+## Modelos lógicos:
+Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
+
+Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
+
+Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
+
+Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, Unprocessed red meats, Total protein, Sugar-sweetened beverages)
+
 ## Slides da Proposta
 
-> [Etapa 4 - Seleção de Fonte de Dados.pptx](../stage01/slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
+> [Etapa 4 - Segundo Modelo e Análise.pptx](../stage01/slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
 
 ## Motivação e Contexto
 
