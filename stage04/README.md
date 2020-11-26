@@ -76,5 +76,3 @@ Global Dietary Database | https://www.globaldietarydatabase.org/ | Consumo de gr
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
 `<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
-Food Availability | https://www.ers.usda.gov/data-products/food-availability-per-capita-data-system/ | Disponibilidade de comida per capita nos EUA.
-Global Dietary Database | https://www.globaldietarydatabase.org/ | Consumo de grupos de alimentos em diversos países, separado por faixa etária, nível de educação, entre outros.
