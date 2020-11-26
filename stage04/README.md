@@ -56,7 +56,7 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
 ## Conjunto de queries de dois modelos
 
 > Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
-> O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas.
+> O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas. <br>
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
 
 ## Bases de Dados
@@ -76,4 +76,6 @@ Global Dietary Database | https://www.globaldietarydatabase.org/ | Consumo de gr
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
+HeartDisease.csv | https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage03/CSVs/HeartDisease.csv | Mortalidade por Doenças de Coração
+ObesityStats_2013.csv | https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage03/CSVs/ObesityStats_2013.csv | Dados sobre Obesidade nos EUA - para o ano de 2013
+ObesityStats.csv | https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage03/CSVs/ObesityStats.csv | Dados sobre Obesidade nos EUA 
