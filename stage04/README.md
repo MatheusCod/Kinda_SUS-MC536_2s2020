@@ -146,22 +146,3 @@ Heart Disease Mortality | https://catalog.data.gov/dataset/heart-disease-mortali
 Prevalence of obesity among adults | https://apps.who.int/gho/data/node.main.BMI30C?lang=en | Prevalência de obesidade entre adultos, BMI ≥ 30, estimativas brutas por país.
 Food Availability | https://www.ers.usda.gov/data-products/food-availability-per-capita-data-system/ | Disponibilidade de comida per capita nos EUA.
 Global Dietary Database | https://www.globaldietarydatabase.org/ | Consumo de grupos de alimentos em diversos países, separado por faixa etária, nível de educação, entre outros.
-
-## `stage03`
-# Etapa 03 - Primeiros Modelos e Análises
-
-~~~
-├── README.md  <- apresentação da etapa
-│
-├── CSVs    <- Arquivos csv da etapa
-│
-├── images    <- Imagem dos modelos conceituais
-│
-└── notebook    <- Notebooks da etapa
-      │
-      └── analiseObesidade.ipynb <- Notebook das Análises/Querys
-      │
-      └── extracaoHeartDisease.ipynb <- Notebook da extração do dataset HeartDisease
-      │
-      └── extracaoObesityStats.ipynb <- Notebook da extração do dataset ObesityStats
-~~~
