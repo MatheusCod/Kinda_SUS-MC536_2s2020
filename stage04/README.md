@@ -10,6 +10,8 @@
 ├── CSVs    <- Arquivos csv da etapa
 │
 ├── images    <- Imagem dos modelos conceituais
+|
+├── slide     <- Slides
 │
 └── notebook    <- Notebooks da etapa
       │
