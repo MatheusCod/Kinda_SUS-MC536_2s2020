@@ -14,6 +14,8 @@ Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína
 
 Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
 
+Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, Unprocessed red meats, Total protein, Sugar-sweetened beverages)
+
 ## `stage03`
 # Etapa 03 - Primeiros Modelos e Análises
 
