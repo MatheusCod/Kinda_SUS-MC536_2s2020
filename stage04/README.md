@@ -24,7 +24,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
 
 ## Modelos conceituais:
-![Modelos Conceituais](images/modelosConceituais.png)
+![Modelos Conceituais](../stage03/images/modelosConceituais.png)
 
 ## Modelos lógicos:
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
@@ -35,7 +35,7 @@ Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
 
 ## Slides da Proposta
 
-> [Etapa 2 - Seleção de Fonte de Dados.pptx](./slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
+> [Etapa 2 - Seleção de Fonte de Dados.pptx](../stage01/slides/Etapa%202%20-%20Seleção%20de%20Fonte%20de%20Dados.pptx)
 
 ## Motivação e Contexto
 
