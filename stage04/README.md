@@ -1,6 +1,19 @@
 ## `stage04`
 # Etapa 4 - Segundo Modelo e Análise
 
+* Jupyter: <br>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
+
+## Modelos conceituais:
+![Modelos Conceituais](./images/modelos_conceituais.png)
+
+## Modelos lógicos:
+Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
+
+Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
+
+Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
+
 ## `stage03`
 # Etapa 03 - Primeiros Modelos e Análises
 
@@ -19,19 +32,6 @@
       │
       └── extracaoObesityStats.ipynb <- Notebook da extração do dataset ObesityStats
 ~~~
-
-* Jupyter: <br>
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
-
-## Modelos conceituais:
-![Modelos Conceituais](./images/modelos_conceituais.png)
-
-## Modelos lógicos:
-Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
-
-Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
-
-Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
 
 ## Slides da Proposta
 
