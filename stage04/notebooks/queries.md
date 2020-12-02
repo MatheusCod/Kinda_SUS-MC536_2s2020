@@ -61,3 +61,26 @@ MERGE (c1)<-[:MeatDiet]->(c2)
 >MATCH (n:CountryFood)  
 MATCH (c1)-[:Relates]->(c2:Country)  
 RETURN c1, c2, n  
+
+***
+# Grupo 4
+Para este grupo foi aplicado o conceito de community para agrupar os países com taxa de obesidade semelhante, baseado nas relações criadas no grupo 3.
+
+>CALL gds.graph.create(
+  'communityGraph',
+  'Country',
+  {
+    Relates: {
+      orientation: 'UNDIRECTED'
+    }
+  }
+)
+
+>CALL gds.louvain.stream('communityGraph')
+YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).name AS name, communityId
+ORDER BY communityId ASC
+
+>CALL gds.louvain.stream('communityGraph')
+YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).name AS name, communityId
