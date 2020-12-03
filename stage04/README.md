@@ -27,7 +27,6 @@ Estrutura de pastas:
 ## Slides da Apresentação da Etapa
 
 > Coloque um link para o arquivo dos slides da apresentação que estão na pasta `slides`.
-[Etapa 4 - Segundo Modelo e Análise](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage04/assets/Etapa%204%20-%20Segundo%20Modelo%20e%20An%C3%A1lise.pdf)
 
 ## Modelo Conceitual Atualizado
 
@@ -77,6 +76,9 @@ MATCH (similar:Country)
 WHERE toInteger(similar.data) <= toInteger(japan.data) + 5 and similar.name <> "Japan"  
 CREATE (similar)-[:Relates]->(japan)  
 
+![Obesidade semelhante aos EUA](./assets/usa_sim_obesity.png)
+![Obesidade semelhante ao Japão](./assets/japan_sim_obesity.png)
+
 ***
 
 ### Grupo 2
@@ -103,7 +105,11 @@ MATCH (c3)-[:MeatDiet]->(us2:CountryFood {name:"United States of America"})
 WHERE (c1.name = c2.name) OR (c1.name = c3.name)  
 RETURN c2, c3  
 
+![Dieta semelhante aos EUA](./assets/similar_diet.png)
+
 ***
+
+
 
 ### Grupo 3
 Neste grupo de _queries_ foram criados um grafo que relaciona os países que possuem taxa de obesidade semelhante entre si e outro que agrupa os países com consumo de carne vermelha parecido. Espera-se criar com isso uma visualização mais geral entre esses grupos
@@ -121,6 +127,13 @@ MERGE (c1)<-[:MeatDiet]->(c2)
 >MATCH (n:CountryFood)  
 MATCH (c1)-[:Relates]->(c2:Country)  
 RETURN c1, c2, n  
+
+![Similaridades](./assets/general_similarities.png)
+![Destaque 1](./assets/cut_1.png)
+![Destaque 2](./assets/cut_2.png)
+![Destaque 3](./assets/cut_5.png)
+![Destaque 4](./assets/cut_3.png)
+![Destaque 5](./assets/cut_4.png)
 
 ***
 ### Grupo 4
