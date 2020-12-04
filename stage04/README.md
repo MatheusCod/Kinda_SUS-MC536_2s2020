@@ -26,7 +26,7 @@ Estrutura de pastas:
 
 ## Slides da Apresentação da Etapa
 
-> Coloque um link para o arquivo dos slides da apresentação que estão na pasta `slides`.
+[Etapa 4 - Segundo Modelo e Análise](./slides/Etapa 4 - Segundo Modelo e Análise.pdf)
 
 ## Modelo Conceitual Atualizado
 
