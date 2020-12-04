@@ -26,17 +26,13 @@ Estrutura de pastas:
 
 ## Slides da Apresentação da Etapa
 
-[Etapa 4 - Segundo Modelo e Análise](./slides/Etapa 4 - Segundo Modelo e Análise.pdf)
+[Etapa 4 - Segundo Modelo e Análise](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage04/slides/Etapa%204%20-%20Segundo%20Modelo%20e%20An%C3%A1lise.pdf)
 
 ## Modelo Conceitual Atualizado
 
 ![Modelos Conceituais](./assets/modelos_conceituais.png)
 
 ## Modelos Lógicos Atualizados
-
-> Coloque aqui os dois modelos lógicos dos bancos de dados relacionados aos modelos conceituais. O modelo lógico da etapa anterior pode ser copiado ou apresentado revisado. Para o modelo relacional, sugere-se o formato a seguir. Para outros modelos lógicos o formato é livre, pode ser adotado aqueles apresentados em sala.
-
-> Exemplo de modelo lógico relacional
 ~~~
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
 
@@ -48,15 +44,9 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
-
-> Coloque um link para o arquivo do notebook que executa a extração e conversão de dados. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se a extração e conversão envolverem queries executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown. <br>
 [Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentosipynb) <br>
 [Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
-## Conjunto de queries de dois modelos
-
-> Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
-> O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas. <br>
 ### Grupo 1
 Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise, e ao Japão, um dos países
 com menor taxa de obesidade.
@@ -161,7 +151,6 @@ RETURN gds.util.asNode(nodeId).name AS name, communityId
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
 
 ## Bases de Dados
-> Elencar as bases de dados utilizadas no projeto. Trata-se de uma atualização daquelas apresentadas na Etapa 3.
 
 título da base | link | breve descrição
 ----- | ----- | -----
@@ -173,7 +162,6 @@ Food Availability | https://www.ers.usda.gov/data-products/food-availability-per
 Global Dietary Database | https://www.globaldietarydatabase.org/ | Consumo de grupos de alimentos em diversos países, separado por faixa etária, nível de educação, entre outros.
 
 ## Arquivos de Dados
-> Elencar os arquivos usados no projeto que estão disponíveis no Github do projeto (manter os da Etapa 3 e acrescentar os da Etapa 4).
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
