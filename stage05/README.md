@@ -19,7 +19,7 @@ Estrutura de pastas:
 └── assets             <- mídias usadas no projeto
 ~~~
 
-# Etapa 04 - Análises com o Segundo Modelo Lógico
+# Etapa 05 - Conclusão do Trabalho
 
 * Jupyter: <br>
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatheusCod/Kinda_SUS-MC536_2s2020/main)
