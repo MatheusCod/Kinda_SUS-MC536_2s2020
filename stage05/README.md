@@ -43,10 +43,12 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
 [Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentosipynb) <br>
 [Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
-## Queries para o modelo de Análise obesidade
+## Conjunto de queries de dois modelos
+
+### Queries para o modelo de Análise Obesidade
 A totalidade das queries podem ser obtidas no seguinte notebook: [Notebook de Análise de Obesidade(https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
-## Conjunto de queries de dois modelos
+### Queries para o modelo de Obesidade e Nutrição Global
 
 ### Grupo 1
 Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise, e ao Japão, um dos países
