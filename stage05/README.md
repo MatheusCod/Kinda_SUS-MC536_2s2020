@@ -38,8 +38,13 @@ Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obes
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
-[Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentos.ipynb) <br>
-[Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
+### Notebooks de extração utilizados na etapa 3
+[Extração Obesity Stats](./notebooks/extracaoHeartDisease.ipynb) <br>
+[Extração Heart Disease](./notebooks/extracaoObesityStats.ipynb)
+
+### Notebooks utilizados na etapa 4
+[Extração Consumo Alimentos](./notebooks/extracaoConsumoAlimentos.ipynb) <br>
+[Extração Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
 ## Conjunto de queries de dois modelos
 ### Queries para o modelo de Análise Obesidade
@@ -60,6 +65,11 @@ CREATE (:Country {name: line.Country, data: line.BothSexes})
 MATCH (similar:Country)  
 WHERE toInteger(similar.data) >= toInteger(us.data) - 10 and similar.name <> "United States of America"   
 CREATE (similar)-[:Relates]->(us)  
+
+>MATCH (c:Country)-[]->(us)  
+RETURN c, us  
+
+<img src="./assets/similar_us.png">  
 
 ***
 
