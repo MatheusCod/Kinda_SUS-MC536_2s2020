@@ -35,8 +35,6 @@ Estrutura de pastas:
 ## Modelos Lógicos Atualizados
 ~~~
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
-
-Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, Unprocessed red meats, Total protein, Sugar-sweetened beverages)
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
