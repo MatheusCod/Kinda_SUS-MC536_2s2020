@@ -164,7 +164,7 @@ YIELD nodeId, communityId
 RETURN gds.util.asNode(nodeId).name AS id, gds.util.asNode(nodeId).data AS data, communityId AS modularity_class  
 ORDER BY id ASC  
 
-## Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
+#### Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
 ![Grafo de comunidade](./assets/community.png)
 
 #### Stage 03
