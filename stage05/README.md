@@ -91,14 +91,14 @@ MATCH (similar:CountryFood)
 WHERE toInteger(similar.BeansAndLegumes) >= toInteger(us.BeansAndLegumes) - 10 and toInteger(similar.BeansAndLegumes) <= toInteger(us.BeansAndLegumes) + 10 and similar.name <> "United States of America"  
 CREATE (similar)-[:BeansLegumesUS]->(us)  
 
-## Países com consumo de alimentos considerados contribuintes para a obesidade semelhante aos EUA
+#### Países com consumo de alimentos considerados contribuintes para a obesidade semelhante aos EUA
 >MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
 MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
 MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})  
 WHERE (c1.name = c2.name) AND (c1.name = c3.name)  
 RETURN c1, us  
 
-## Países com consumo de alimentos não considerados contribuintes para a obesidade semelhante aos EUA
+#### Países com consumo de alimentos não considerados contribuintes para a obesidade semelhante aos EUA
 >MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
 MATCH (c2)-[:FruitConsumptionUS]->(:CountryFood {name:"United States of America"})  
 MATCH (c3)-[:VegetablesUS]->(:CountryFood {name:"United States of America"})  
@@ -108,7 +108,7 @@ RETURN c1, us
 
 ![Dieta semelhante aos EUA](./assets/similar_diet.png)
 
-## Interseção entre os países com taxa de obesidade e consumo de alimentos considerados contribuentes para a obesidade semelhantes aos EUA
+#### Interseção entre os países com taxa de obesidade e consumo de alimentos considerados contribuentes para a obesidade semelhantes aos EUA
 MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
 MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
 MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})  
@@ -167,7 +167,7 @@ ORDER BY id ASC
 #### Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
 ![Grafo de comunidade](./assets/community.png)
 
-#### Stage 03
+## Stage 03
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
 
 ## Bases de Dados
