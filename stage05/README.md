@@ -44,7 +44,7 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
-[Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentosipynb) <br>
+[Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentos.ipynb) <br>
 [Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
 ### Grupo 1
