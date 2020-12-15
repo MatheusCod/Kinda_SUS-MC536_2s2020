@@ -38,6 +38,11 @@ Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obes
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
+### Notebooks utilizados na etapa 3
+[Extracao Obesity Stats](./notebooks/extracaoHeartDisease.ipynb) <br>
+[Extracao Heart Disease](./notebooks/extracaoObesityStats.ipynb)
+
+### Notebooks utilizados na etapa 4
 [Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentos.ipynb) <br>
 [Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
@@ -48,8 +53,7 @@ A totalidade das queries podem ser obtidas no seguinte notebook:
 
 ### Queries para o modelo de Obesidade e Nutrição Global
 ### Grupo 1
-Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise, e ao Japão, um dos países
-com menor taxa de obesidade.
+Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise.
 
 >LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/MatheusCod/Kinda_SUS-MC536_2s2020/main/stage04/data/processed/treated_global_obesity.csv' AS line  
 CREATE (:Country {name: line.Country, data: line.BothSexes})
@@ -59,7 +63,12 @@ CREATE (:Country {name: line.Country, data: line.BothSexes})
 >MATCH (us:Country {name: "United States of America"})  
 MATCH (similar:Country)  
 WHERE toInteger(similar.data) >= toInteger(us.data) - 10 and similar.name <> "United States of America"   
-CREATE (similar)-[:Relates]->(us)  
+CREATE (similar)-[:Relates]->(us) 
+
+>MATCH (c:Country)-[]->(us)  
+RETURN c, us  
+
+<img src="./assets/similar_us.png">  
 
 ***
 
@@ -123,8 +132,6 @@ RETURN c1, us
 <img src="./assets/goodfood_us.png">
 
 ***
-
-
 
 ### Grupo 3
 Neste grupo de _queries_ foram criados um grafo que relaciona os países que possuem taxa de obesidade semelhante entre si e outro que agrupa os países com consumo de carne vermelha parecido. Espera-se criar com isso uma visualização mais geral entre esses grupos
