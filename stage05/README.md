@@ -49,7 +49,7 @@ Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obes
 # Conjunto de queries dos dois modelos
 ## Queries para o modelo de Análise Obesidade (tabelas)
 A totalidade das queries podem ser obtidas no seguinte notebook:  
-[Notebook de Análise de Obesidade](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
+[Notebook de Análise de Obesidade](./notebooks/analiseObesidade.ipynb.ipynb)
 
 ## Queries para o modelo de Obesidade e Nutrição Global (grafos)
 ### Grupo 1
