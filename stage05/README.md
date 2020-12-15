@@ -114,7 +114,7 @@ RETURN c1, us
 <img src="./assets/badfood_us.png">
 
 #### Interseção entre os países com taxa de obesidade e consumo de alimentos considerados contribuentes para a obesidade semelhantes aos EUA
-MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
+>MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
 MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
 MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})  
 WHERE (c1.name = c2.name) AND (c1.name = c3.name)   
