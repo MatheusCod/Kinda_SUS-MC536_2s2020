@@ -61,18 +61,10 @@ MATCH (similar:Country)
 WHERE toInteger(similar.data) >= toInteger(us.data) - 10 and similar.name <> "United States of America"   
 CREATE (similar)-[:Relates]->(us)  
 
->MATCH (japan:Country {name: "Japan"})  
-MATCH (similar:Country)  
-WHERE toInteger(similar.data) <= toInteger(japan.data) + 5 and similar.name <> "Japan"  
-CREATE (similar)-[:Relates]->(japan)  
-
-![Obesidade semelhante aos EUA](./assets/usa_sim_obesity.png)
-![Obesidade semelhante ao Japão](./assets/japan_sim_obesity.png)
-
 ***
 
 ### Grupo 2
-Aqui foram agrupados os países que possuem um consumo de carne vermelha e bebidas açucaradas semelhantes aos EUA, com o objetivo de, em conjunto com as _queries_ do grupo 1, visualizar a possível correlação entre os dois grupos.
+Aqui foram agrupados os países que possuem um consumo alimentos semelhantes aos EUA, com o objetivo de, em conjunto com as _queries_ do grupo 1, visualizar a possível correlação entre os dois grupos.
 
 >LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/MatheusCod/Kinda_SUS-MC536_2s2020/main/stage04/data/processed/consumo_alimentos_etapa4.csv' AS line  
 CREATE (:CountryFood {name: line.countryname, Fruits: line.Fruits, Vegetables: line.Vegetables, BeansAndLegumes: line.BeansAndLegumes, UnprocessedRedMeats: line.UnprocessedRedMeats, SugarSweetenedBeverages: line.SugarSweetenedBeverages})  
@@ -81,21 +73,49 @@ CREATE (:CountryFood {name: line.countryname, Fruits: line.Fruits, Vegetables: l
 
 >MATCH (us:CountryFood {name: "United States of America"})  
 MATCH (similar:CountryFood)  
-WHERE toInteger(similar.UnprocessedRedMeats) >= toInteger(us.UnprocessedRedMeats) - 10 and toInteger(similar.UnprocessedRedMeats) <= toInteger(us.UnprocessedRedMeats) + 10 and similar.name <> "United States of America"   
-CREATE (similar)-[:MeatDiet]->(us)  
+WHERE toInteger(similar.UnprocessedRedMeats) >= toInteger(us.UnprocessedRedMeats) - 10 and toInteger(similar.UnprocessedRedMeats) <= toInteger(us.UnprocessedRedMeats) + 10 and similar.name <> "United States of America"  
+CREATE (similar)-[:MeatDietUS]->(us)  
 
 >MATCH (us:CountryFood {name: "United States of America"})  
 MATCH (similar:CountryFood)  
-WHERE toInteger(similar.SugarSweetenedBeverages) >= toInteger(us.SugarSweetenedBeverages) - 20 and similar.name <> "United States of America"   
-CREATE (similar)-[:Sugar]->(us)  
+WHERE toInteger(similar.SugarSweetenedBeverages) >= toInteger(us.SugarSweetenedBeverages) - 20 and similar.name <> "United States of America"  
+CREATE (similar)-[:SugarUS]->(us)  
 
+>MATCH (us:CountryFood {name: "United States of America"})  
+MATCH (similar:CountryFood)  
+WHERE toInteger(similar.Vegetables) >= toInteger(us.Vegetables) - 10 and toInteger(similar.Vegetables) <= toInteger(us.Vegetables) + 10 and similar.name <> "United States of America"  
+CREATE (similar)-[:VegetablesUS]->(us)  
+
+>MATCH (us:CountryFood {name: "United States of America"})  
+MATCH (similar:CountryFood)  
+WHERE toInteger(similar.BeansAndLegumes) >= toInteger(us.BeansAndLegumes) - 10 and toInteger(similar.BeansAndLegumes) <= toInteger(us.BeansAndLegumes) + 10 and similar.name <> "United States of America"  
+CREATE (similar)-[:BeansLegumesUS]->(us)  
+
+## Países com consumo de alimentos considerados contribuintes para a obesidade semelhante aos EUA
 >MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
-MATCH (c2)-[:Sugar]->(us2:CountryFood {name:"United States of America"})  
-MATCH (c3)-[:MeatDiet]->(us2:CountryFood {name:"United States of America"})  
-WHERE (c1.name = c2.name) OR (c1.name = c3.name)  
-RETURN c2, c3  
+MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
+MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})  
+WHERE (c1.name = c2.name) AND (c1.name = c3.name)  
+RETURN c1, us  
+
+## Países com consumo de alimentos não considerados contribuintes para a obesidade semelhante aos EUA
+>MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
+MATCH (c2)-[:FruitConsumptionUS]->(:CountryFood {name:"United States of America"})  
+MATCH (c3)-[:VegetablesUS]->(:CountryFood {name:"United States of America"})  
+MATCH (c4)-[:BeansLegumesUS]->(:CountryFood {name:"United States of America"})  
+WHERE (c1.name = c2.name) AND (c1.name = c3.name) AND (c1.name = c4.name)   
+RETURN c1, us
 
 ![Dieta semelhante aos EUA](./assets/similar_diet.png)
+
+## Interseção entre os países com taxa de obesidade e consumo de alimentos considerados contribuentes para a obesidade semelhantes aos EUA
+MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
+MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
+MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})  
+WHERE (c1.name = c2.name) AND (c1.name = c3.name)   
+RETURN c1, us  
+
+
 
 ***
 
@@ -130,7 +150,7 @@ RETURN c1, c2, n
 Para este grupo foi aplicado o conceito de community para agrupar os países com taxa de obesidade semelhante, baseado nas relações criadas no grupo 3.
 
 >CALL gds.graph.create(  
-    'communityGraph',  
+    'communityObesity',  
     'Country',  
     {  
         Relates: {  
@@ -139,14 +159,14 @@ Para este grupo foi aplicado o conceito de community para agrupar os países com
     }   
 )
 
->CALL gds.louvain.stream('communityGraph')  
+>CALL gds.louvain.stream('communityObesity')  
 YIELD nodeId, communityId  
-RETURN gds.util.asNode(nodeId).name AS name, communityId  
-ORDER BY communityId ASC
+RETURN gds.util.asNode(nodeId).name AS id, gds.util.asNode(nodeId).data AS data, communityId AS modularity_class  
+ORDER BY id ASC  
 
->CALL gds.louvain.stream('communityGraph')  
-YIELD nodeId, communityId  
-RETURN gds.util.asNode(nodeId).name AS name, communityId  
+## Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
+![Grafo de comunidade](./assets/community.png)
+
 #### Stage 03
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
 
