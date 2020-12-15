@@ -36,20 +36,16 @@ Estrutura de pastas:
 ~~~
 Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obesidade_homens, Obesidade_mulheres)
 
+Consumo de alimentos(Gênero, Idade, Carne vermelha, Frutas, Vegetais, Proteína, Bebidas açucaradas)
+
+Disponibilidade(Açúcares, Frutas, Carne Vermelha, Vegetais)
+
 Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, Unprocessed red meats, Total protein, Sugar-sweetened beverages)
 ~~~
 
-## Programas de extração e conversão de dados atualizado
+## Programa de extração e conversão de dados atualizado
 [Extracao Consumo Alimentos](./notebooks/extracaoConsumoAlimentosipynb) <br>
 [Extracao Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
-
-## Conjunto de queries de dois modelos
-
-### Queries para o modelo de Análise Obesidade
-A totalidade das queries podem ser obtidas no seguinte notebook:   
-[Notebook de Análise de Obesidade](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
-
-### Queries para o modelo de Obesidade e Nutrição Global
 
 ### Grupo 1
 Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise, e ao Japão, um dos países
@@ -95,6 +91,11 @@ MATCH (similar:CountryFood)
 WHERE toInteger(similar.BeansAndLegumes) >= toInteger(us.BeansAndLegumes) - 10 and toInteger(similar.BeansAndLegumes) <= toInteger(us.BeansAndLegumes) + 10 and similar.name <> "United States of America"  
 CREATE (similar)-[:BeansLegumesUS]->(us)  
 
+>MATCH (c:CountryFood)-[]->(us)  
+RETURN c, us  
+
+<img src="./assets/similar_consumption.png">
+
 #### Países com consumo de alimentos considerados contribuintes para a obesidade semelhante aos EUA
 >MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
 MATCH (c2)-[:SugarUS]->(:CountryFood {name:"United States of America"})  
@@ -110,7 +111,7 @@ MATCH (c4)-[:BeansLegumesUS]->(:CountryFood {name:"United States of America"})
 WHERE (c1.name = c2.name) AND (c1.name = c3.name) AND (c1.name = c4.name)   
 RETURN c1, us
 
-![Dieta semelhante aos EUA](./assets/similar_diet.png)
+<img src="./assets/badfood_us.png">
 
 #### Interseção entre os países com taxa de obesidade e consumo de alimentos considerados contribuentes para a obesidade semelhantes aos EUA
 MATCH (c1)-[:Relates]->(us:Country {name:"United States of America"})  
@@ -119,7 +120,7 @@ MATCH (c3)-[:MeatDietUS]->(:CountryFood {name:"United States of America"})
 WHERE (c1.name = c2.name) AND (c1.name = c3.name)   
 RETURN c1, us  
 
-
+<img src="./assets/goodfood_us.png">
 
 ***
 
@@ -142,12 +143,12 @@ MERGE (c1)<-[:MeatDiet]->(c2)
 MATCH (c1)-[:Relates]->(c2:Country)  
 RETURN c1, c2, n  
 
-![Similaridades](./assets/general_similarities.png)
-![Destaque 1](./assets/cut_1.png)
-![Destaque 2](./assets/cut_2.png)
-![Destaque 3](./assets/cut_5.png)
-![Destaque 4](./assets/cut_3.png)
-![Destaque 5](./assets/cut_4.png)
+<img src="./assets/general_similarities.png" width="675" height="544">
+<img src="./assets/cut_1.png" width="689" height="325">
+<img src="./assets/cut_2.png" width="583" height="354">
+<img src="./assets/cut_5.png" width="820" height="284">
+<img src="./assets/cut_3.png" width="621" height="345">
+<img src="./assets/cut_4.png" width="578" height="359">
 
 ***
 ### Grupo 4
@@ -169,7 +170,9 @@ RETURN gds.util.asNode(nodeId).name AS id, gds.util.asNode(nodeId).data AS data,
 ORDER BY id ASC  
 
 #### Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
-![Grafo de comunidade](./assets/community.png)
+<p>
+<img src="./assets/community.png" width="768" height="768">
+</p>
 
 ## Stage 03
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
