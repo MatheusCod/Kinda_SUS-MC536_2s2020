@@ -46,7 +46,8 @@ Obesidade e Nutrição Global(Country, Obesity, Fruit, Non-starchy vegetables, U
 ## Conjunto de queries de dois modelos
 
 ### Queries para o modelo de Análise Obesidade
-A totalidade das queries podem ser obtidas no seguinte notebook: [Notebook de Análise de Obesidade(https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
+A totalidade das queries podem ser obtidas no seguinte notebook: 
+![Notebook de Análise de Obesidade(https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
 ### Queries para o modelo de Obesidade e Nutrição Global
 
