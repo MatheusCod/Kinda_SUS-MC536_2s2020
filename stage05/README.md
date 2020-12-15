@@ -46,12 +46,12 @@ Análise obesidade(LocationAbbr,  Mortalidade_homens, Mortalidade_mulheres, Obes
 [Extração Consumo Alimentos](./notebooks/extracaoConsumoAlimentos.ipynb) <br>
 [Extração Global Obesity](./notebooks/extracaoGlobalObesity.ipynb)
 
-## Conjunto de queries de dois modelos
-### Queries para o modelo de Análise Obesidade
+# Conjunto de queries dos dois modelos
+## Queries para o modelo de Análise Obesidade (tabelas)
 A totalidade das queries podem ser obtidas no seguinte notebook:  
 [Notebook de Análise de Obesidade](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
-### Queries para o modelo de Obesidade e Nutrição Global
+## Queries para o modelo de Obesidade e Nutrição Global (grafos)
 ### Grupo 1
 Nesse primeiro conjunto de _queries_ são agrupados países que possuem uma taxa de obesidade semelhante aos EUA, país alvo da nossa análise, e ao Japão, um dos países
 com menor taxa de obesidade.
