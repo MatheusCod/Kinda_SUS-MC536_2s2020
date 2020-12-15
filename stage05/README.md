@@ -169,10 +169,9 @@ YIELD nodeId, communityId
 RETURN gds.util.asNode(nodeId).name AS id, gds.util.asNode(nodeId).data AS data, communityId AS modularity_class  
 ORDER BY id ASC  
 
-#### Abaixo o grafo resultante, feito a partir do software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de 
-<p>
+#### Abaixo o grafo resultante, feito no software Gephi, com nós coloridos a partir da comunidade a que pertencem e de tamanho proporcional à sua taxa de obesidade
+
 <img src="./assets/community.png" width="768" height="768">
-</p>
 
 ## Stage 03
 [Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
