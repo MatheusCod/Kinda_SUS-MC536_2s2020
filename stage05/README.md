@@ -173,9 +173,6 @@ ORDER BY id ASC
 
 <img src="./assets/community.png" width="768" height="768">
 
-## Stage 03
-[Análise Obesidade](../stage03/notebook/analiseObesidade.ipynb)
-
 ## Bases de Dados
 
 título da base | link | breve descrição
