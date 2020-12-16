@@ -26,7 +26,7 @@ Estrutura de pastas:
 
 ## Slides da Apresentação da Etapa
 
-[Etapa 4 - Segundo Modelo e Análise](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage04/slides/Etapa%204%20-%20Segundo%20Modelo%20e%20An%C3%A1lise.pdf)
+[Etapa 5 - Análise Final](https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/slides/Etapa%205%20-%20An%C3%A1lise%20Final.pdf)
 
 ## Modelo Conceitual Atualizado
 
