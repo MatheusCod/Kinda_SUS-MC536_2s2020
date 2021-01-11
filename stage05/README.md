@@ -33,6 +33,8 @@ sns.distplot(df.Hemoglobin);
 plt.show();
 ~~~
 
+## Evolução do projeto
+
  Inicialmente, planejava-se trabalhar com cinco bases de dados, definidas na etapa 2: 
 > DBpedia - http://dbpedia.org/page/Obesity;
 > Obesity Stats - https://www.kaggle.com/adu47249/obesity-stats;
@@ -141,7 +143,7 @@ Na etapa inicial do trabalho definimos que iríamos analisar a obesidade nos Est
 
 ## Modelo Conceitual Final
 
-![Modelos Conceituais](./assets/modelo_conceitual_final.png)
+![Modelos Conceituais](./assets/modelo_conceitual_final.png width="768" height="768")
 
 ## Modelos Lógicos Finais
 
