@@ -26,12 +26,35 @@ Devido a sua relevância, escolhemos essa questão como tema do nosso projeto, o
 > Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
 > Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
 
+
+
+
+O código a seguir é o mais importante da análise do ObesityStats.
+Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base ObesityStats.
+Como é possível observar pelo código, esta query depende de outras queries anteriores, a quais estão disponíveis no seguinte notebook:
+[![Open In Colab: analiseObesidade_stage05.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
+
 ~~~python
-df = pd.read_excel("/content/drive/My Drive/Colab Notebooks/dataset.xlsx");
-sns.set(color_codes=True);
-sns.distplot(df.Hemoglobin);
-plt.show();
+query11 = pd.read_sql(""" 
+  SELECT query1.LocationAbbr, query1.Mortalidade_homens, query1.Mortalidade_mulheres, query1.Obesidade_homens, query1.Obesidade_mulheres, query9.Average Homens_sedentarios, query10.Average Mulheres_sedentarias
+  FROM query1, query9, query10
+  WHERE query9.LocationAbbr = query1.LocationAbbr AND query10.LocationAbbr = query1.LocationAbbr
+  GROUP BY query1.LocationAbbr
+  ORDER BY query1.LocationAbbr
+""", conn)
+c.execute("DROP TABLE IF EXISTS query11")
+query11.to_sql('query11', conn)
+query11
 ~~~
+
+Para a extração dos dados necessários, foram criados os seguintes notebooks:
+[![Open In Colab: extracaoConsumoAlimentos.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoConsumoAlimentos.ipynb)
+
+[![Open In Colab: extracaoGlobalObesity.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)
+
+[![Open In Colab: extracaoHeartDisease.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoHeartDisease.ipynb)
+
+[![Open In Colab: extracaoObesityStats.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoObesityStats.ipynb)
 
 ## Evolução do projeto
 
