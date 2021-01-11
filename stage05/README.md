@@ -134,13 +134,13 @@ A partir dessa questão, foram plotados os gráficos comparando os valores de Mo
 É visível que, na maioria dos estados, valores altos para os homens também refletem em valores altos para mulheres.
 De fato, é extremamente plausível aplicar uma regressão linear nos três gráficos.
 
-![Gráfico Mortalidade](./assets/Mortalidade mulheres x Mortalidade homens.png)
-![Gráfico Sedentarismo](./assets/Mulheres sedentarias x Homens sedentarios.png)
-![Gráfico Obesidade](./assets/Obesidade mulheres x Obesidade homens.png)
+![Gráfico Mortalidade](./assets/Mortalidade%20mulheres%20x%20Mortalidade%20homens.png)
+![Gráfico Sedentarismo](./assets/Mulheres%20sedentarias%20x%20Homens%20sedentarios.png)
+![Gráfico Obesidade](./assets/Obesidade%20mulheres%20x%20Obesidade%20homens.png)
 
 Um outro gráfico interessante é o de valores totais para ambos os sexos.
 Nele, é possível observar a contribuição de cada campo para os estados.
-![Gráfico Total](./assets/Valores de Mortalidade, Sedentarismo e Obesidade para ambos os sexos.png)
+![Gráfico Total](./assets/Valores%20de%20Mortalidade,%20Sedentarismo%20e%20Obesidade%20para%20ambos%20os%20sexos.png)
 
 A partir dos resultados obtidos, é possível perceber que um estudo mais completo consegue ser extraído a partir dos dados acerca da Obesidade nos EUA, porém, para tal, seria preciso tanto um conhecimento mais apurado das questões médicas e nutricionais envolvidas como dados mais detalhados acerca da ingestão de alimentos. Visto que, por exemplo, até mesmo o número de mastigações afeta em um caso de obesidade.
 
