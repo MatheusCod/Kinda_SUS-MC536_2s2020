@@ -47,7 +47,7 @@ query11.to_sql('query11', conn)
 query11
 ~~~
 
-Para a extração dos dados necessários, foram criados os seguintes notebooks:
+Para a extração dos dados necessários, foram criados os seguintes notebooks:  
 [![Open In Colab: extracaoConsumoAlimentos.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoConsumoAlimentos.ipynb)
 
 [![Open In Colab: extracaoGlobalObesity.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)
