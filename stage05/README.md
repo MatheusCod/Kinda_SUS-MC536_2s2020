@@ -37,9 +37,13 @@ plt.show();
 
  Inicialmente, planejava-se trabalhar com cinco bases de dados, definidas na etapa 2: 
 > DBpedia - http://dbpedia.org/page/Obesity;
+
 > Obesity Stats - https://www.kaggle.com/adu47249/obesity-stats;
+
 > Heart Disease Mortality - https://catalog.data.gov/dataset/heart-disease-mortality-data-among-us-adults-35-by-state-territory-and-county-d31fc/resource/5974720b-7972-4272-8eb1-277dfdc538c2;
+
 > Food Availability - https://www.ers.usda.gov/data-products/food-availability-per-capita-data-system/  e 
+
 > Global Dietary Database - https://www.globaldietarydatabase.org/.
 
 Essas bases englobariam os modelos relacional (Obesity Stats, Food Availability e Global Dietary Database), hierárquico (Heart Disease Mortality) e de grafos (DBpedia), mas logo foi notado que a DBpedia não forneceria dados interessantes para as análises planejadas.
