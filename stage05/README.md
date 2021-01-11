@@ -143,7 +143,7 @@ Na etapa inicial do trabalho definimos que iríamos analisar a obesidade nos Est
 
 ## Modelo Conceitual Final
 
-![Modelos Conceituais](./assets/modelo_conceitual_final.png width="768" height="768")
+![Modelos Conceituais](./assets/modelo_conceitual_final.png)
 
 ## Modelos Lógicos Finais
 
