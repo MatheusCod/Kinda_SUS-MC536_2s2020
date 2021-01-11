@@ -23,12 +23,9 @@ O conjunto de diversos fatores, como o consumo de alimentos altamente calóricos
 Devido a sua relevância, escolhemos essa questão como tema do nosso projeto, onde serão utilizados diversos dados para entender melhor as causas da obesidade e sua relevância para a incidência de doenças cardíacas.
 
 ## Detalhamento do Projeto
-> Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
-> Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
-
-O código a seguir é o mais importante da análise do ObesityStats.
-Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base Análise Obesidade.
+O código a seguir é o mais importante da análise do ObesityStats. Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base Análise Obesidade.
 Como é possível observar pelo código, esta query depende de outras queries anteriores, a quais estão disponíveis no seguinte notebook:
+
 analiseObesidade_stage05.ipynb: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
 ~~~python
@@ -44,14 +41,21 @@ query11.to_sql('query11', conn)
 query11
 ~~~
 
-Para a extração dos dados necessários, foram criados os seguintes notebooks:    
-extracaoConsumoAlimentos.ipynb:
+Para a extração dos dados necessários, foram criados os notebooks abaixo utilizamos da linguagem de python para realizar as operações com o auxílio da biblioteca pandas e csv.  
+
+1) extracaoConsumoAlimentos.ipynb:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoConsumoAlimentos.ipynb)  
-extracaoGlobalObesity.ipynb:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)  
-extracaoHeartDisease.ipynb:
+Em 1 temos estamos aplicando a filtragem no dataset consumo de alimentos que está disponível na etapa 3. Está filtragem é essencial pois tirar alguns dados faltantantes que poderam gerar algum incogruencias nas análises das proximas etapas e ajustando o genero para ambos os sexos, já que visamos comparar os resultados tanto para sexo masculino quanto para o feminino. 
+
+2) extracaoHeartDisease.ipynb:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoHeartDisease.ipynb)  
-extracaoObesityStats.ipynb:
+Neste notebook obtemos a conversão de um json em uma tabela, que apenas pegamos a parte de doenças cardiovasculares, e depois de ajustamos a tabela removendo algumas colunas cujo os dados não nos interessam.
+
+3) extracaoGlobalObesity.ipynb:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)  
+Na etapa 3, foi criado este notebook filtrando alguns parametros como por exemplo: separar os dados entre o intervalo de tempo de 2012 até 2014, pois é a faixa temporal que tinhamos em outros datasets; Delimitar a faixa etária para apenas pessoas com menos de 35 anos; padronizar alguns campos de dados para deixar similares aos outros datasets. E ao longo das outras etapas foi necessário fazer pequenas mudanças neste novo dataset que foi criado como foi feito no notebook 4
+
+3) extracaoObesityStats.ipynb:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoObesityStats.ipynb)  
 
 Outro código importante para o projeto pode ser visto atráves do Grupo 3 Obesidade e Nutrição Global, o qual colocamos aqui para demosntração do código do Neo4J nesta parte do trabalho.
