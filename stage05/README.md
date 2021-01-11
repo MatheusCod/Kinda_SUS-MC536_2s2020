@@ -42,7 +42,11 @@ plt.show();
 
 Essas bases englobariam os modelos relacional (Obesity Stats, Food Availability e Global Dietary Database), hierárquico (Heart Disease Mortality) e de grafos (DBpedia), mas logo foi notado que a DBpedia não forneceria dados interessantes para as análises planejadas.
 Indo para a etapa 3, o objetivo era, por meio do modelo relacional, realizar as primeiras análises utilizando os dados de obesidade e mortalidade por doenças cardíacas. Foi criado o primeiro modelo lógico para o projeto, consistindo de três tabelas, das quais a de Consumo Alimentos e Disponibilidade Alimentos seriam comparadas com o objetivo de verificar uma possível correlação entre esses dados e a obesidade nos EUA e a tabela Análise Obesidade serviria para procurar correlação entre a taxa de obesidade em cada estado dos EUA e sua taxa de mortalidade por doenças cardíacas.
+
+
 <img src="https://github.com/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage03/images/modelosConceituais.png" width="500" height="500">  
+
+
 Nesta etapa, foi concretizada a tabela Análise Obesidade, construída a partir dos dados da base Obesity Stats e Heart Disease Mortality. Para isso, primeiro foi necessário formatar os dados de Heart Disease Mortality, inicialmente em formato JSON, para CSV, de modo que as duas bases pudessem ser mais facilmente juntadas. Além disso, ambas as tabelas foram filtradas, pois havia dados que não seriam relevantes para a análise desejada e também tratadas, pois a estratificação dos dados estava diferente. Assim, decidiu-se que ambas as tabelas conteriam os seus respectivos dados separados por estado e gênero, comuns às duas.
 A partir dessas tabelas, foi feito um join para gerar a Análise Obesidade, onde as primeiras análises foram feitas.
 Para a etapa 4, o modelo de grafos foi trabalhado. Aqui foi decidido que seria mais interessante trabalhar com uma perspectiva mais global da alimentação, ao invés de olharmos somente para o consumo e disponibilidade de alimentos nos EUA. Para isso, foi descartada a base de Food Availability e adicionada mais uma, Prevalence of obesity among adults (https://apps.who.int/gho/data/node.main.BMI30C?lang=en). Em conjunto com a Global Dietary Database, então, foram criados grafos para uma visualização do panorama geral do mundo em relação à obesidade e à alimentação.
