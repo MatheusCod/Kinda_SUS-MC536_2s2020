@@ -27,7 +27,7 @@ Devido a sua relevância, escolhemos essa questão como tema do nosso projeto, o
 > Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
 
 O código a seguir é o mais importante da análise do ObesityStats.
-Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base ObesityStats.
+Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base Análise Obesidade.
 Como é possível observar pelo código, esta query depende de outras queries anteriores, a quais estão disponíveis no seguinte notebook:
 analiseObesidade_stage05.ipynb: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
@@ -53,6 +53,25 @@ extracaoHeartDisease.ipynb:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoHeartDisease.ipynb)  
 extracaoObesityStats.ipynb:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoObesityStats.ipynb)  
+
+Outro código importante para o projeto pode ser visto atráves do Grupo 3 Obesidade e Nutrição Global, o qual colocamos aqui para demosntração do código do Neo4J nesta parte do trabalho.
+
+### Grupo 3
+Neste grupo de _queries_ foram criados um grafo que relaciona os países que possuem taxa de obesidade semelhante entre si e outro que agrupa os países com consumo de carne vermelha parecido. Espera-se criar com isso uma visualização mais geral entre esses grupos
+
+>MATCH (c1:Country)  
+MATCH (c2:Country)  
+WHERE toInteger(c1.data) >= toInteger(c2.data) - 1 AND toInteger(c1.data) <= toInteger(c2.data) + 1 AND c1.name <> c2.name  
+MERGE (c1)<-[d:Relates]->(c2)  
+
+>MATCH (c1:CountryFood)  
+MATCH (c2:CountryFood)  
+WHERE toInteger(c1.UnprocessedRedMeats) >= toInteger(c2.UnprocessedRedMeats) - 1 and toInteger(c1.UnprocessedRedMeats) <= toInteger(c2.UnprocessedRedMeats) + 1 and c1.name <> c2.name  
+MERGE (c1)<-[:MeatDiet]->(c2)  
+
+>MATCH (n:CountryFood)  
+MATCH (c1)-[:Relates]->(c2:Country)  
+RETURN c1, c2, n  
 
 ## Evolução do projeto
 
