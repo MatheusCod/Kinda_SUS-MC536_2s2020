@@ -26,14 +26,10 @@ Devido a sua relevância, escolhemos essa questão como tema do nosso projeto, o
 > Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
 > Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
 
-
-
-
 O código a seguir é o mais importante da análise do ObesityStats.
 Nele, é criada a Query que disponibiliza os dados gerais de Mortalidade por doenças cardíacas, Obesidade e Sedentarismo em cada estado americano. É deste query que surge os gráficos e a discussão da base ObesityStats.
-Como é possível observar pelo código, esta query depende de outras queries anteriores, a quais estão disponíveis no seguinte notebook:  
-analiseObesidade_stage05.ipynb  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
+Como é possível observar pelo código, esta query depende de outras queries anteriores, a quais estão disponíveis no seguinte notebook:
+analiseObesidade_stage05.ipynb: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/analiseObesidade_stage05.ipynb)
 
 ~~~python
 query11 = pd.read_sql(""" 
@@ -48,15 +44,15 @@ query11.to_sql('query11', conn)
 query11
 ~~~
 
-Para a extração dos dados necessários, foram criados os seguintes notebooks:  
-extracaoConsumoAlimentos.ipynb:  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoConsumoAlimentos.ipynb)
-extracaoGlobalObesity.ipynb:  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)
+Para a extração dos dados necessários, foram criados os seguintes notebooks:    
+extracaoConsumoAlimentos.ipynb:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoConsumoAlimentos.ipynb)  
+extracaoGlobalObesity.ipynb:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoGlobalObesity.ipynb)  
 extracaoHeartDisease.ipynb:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoHeartDisease.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoHeartDisease.ipynb)  
 extracaoObesityStats.ipynb:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoObesityStats.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MatheusCod/Kinda_SUS-MC536_2s2020/blob/main/stage05/notebooks/extracaoObesityStats.ipynb)  
 
 ## Evolução do projeto
 
